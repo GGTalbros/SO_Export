@@ -33,7 +33,7 @@ def process_rdr1_excel(uploaded_file):
     }
     rdr1_df = pd.DataFrame(rdr1_data)
     
-    old_columns = ["DocNum", "LineNum", "ItemCode", "SupplierCatNum", "Quantity", "PriceBefDi", "AccountCode", "TaxCode", "WhsCode"]
+    old_columns = ["DocNum", "LineNum", "ItemCode", "SubCatNum", "Quantity", "PriceBefDi", "AcctCode", "TaxCode", "WhsCode"]
     old_row = pd.DataFrame([old_columns], columns=rdr1_df.columns)
     rdr1_df = pd.concat([old_row, rdr1_df], ignore_index=True)
     
